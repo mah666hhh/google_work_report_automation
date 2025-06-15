@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Google作業報告自動入力</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: 'Segoe UI', 'Meiryo UI', sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    h1 {
+      font-size: 16px;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"] {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #3367D6;
+    }
+    .status {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #4CAF50;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Google作業報告自動入力設定</h1>
+
+    <div class="form-group">
+      <label for="name">名前（自動入力用）:</label>
+      <input type="text" id="name" placeholder="例: 山田太郎">
+    </div>
+
+    <button id="save">設定を保存</button>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

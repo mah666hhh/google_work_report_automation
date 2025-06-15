@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Google作業報告自動入力",
+  "version": "1.0",
+  "description": "Googleフォームの作業報告を自動入力するための拡張機能",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://docs.google.com/forms/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/forms/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
